@@ -58,6 +58,7 @@
             push: true
             tags: kwdsa.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e89ad71645c346498c1d26d3c45f60cb }}/azure-example:${{ github.sha }}
             file: ./Dockerfile
+            context: ${{ github.workspace }}
 
       deploy:
         runs-on: ubuntu-latest
